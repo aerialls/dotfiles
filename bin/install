@@ -4,6 +4,11 @@ SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
 HOSTNAME="$(hostname -s)"
 
+cd $DOTFILES && git submodule init
+
+# Fonts
+$DOTFILES/fonts/install.sh
+
 # Visual Studio Code
 ln -nfs $DOTFILES/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
@@ -14,3 +19,10 @@ ln -nfs $DOTFILES/git/gitignore-global ~/.gitignore-global
 if [ -f "$DOTFILES/git/gitconfig-$HOSTNAME" ]; then
     ln -nfs $DOTFILES/git/gitconfig-$HOSTNAME ~/.gitconfig-local
 fi
+
+# ZSH
+ln -nfs $DOTFILES/zsh/zshrc ~/.zshrc
+
+# iTerm
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
