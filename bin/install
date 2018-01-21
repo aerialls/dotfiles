@@ -21,7 +21,7 @@ if [ -f "$DOTFILES/git/gitconfig-$HOSTNAME" ]; then
 fi
 
 # ZSH
-ln -nfs $DOTFILES/zsh/zshrc ~/.zshrc
+ln -nfs $DOTFILES/zsh/zshrc.zsh ~/.zshrc
 
 # iTerm
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"

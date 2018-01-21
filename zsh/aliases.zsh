@@ -1,3 +1,3 @@
-if is_osx; then
+if is_macos; then
     alias afk="pmset displaysleepnow"
 fi

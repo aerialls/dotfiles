@@ -6,7 +6,7 @@ is_linux () {
     [[ $('uname') == 'Linux' ]];
 }
 
-is_osx () {
+is_macos () {
     [[ $('uname') == 'Darwin' ]]
 }
 
@@ -23,7 +23,7 @@ if ! zgen saved; then
 
     zgen load unixorn/git-extra-commands
 
-    if is_osx; then
+    if is_macos; then
         zgen load chriskempson/base16-iterm2
     fi
 
