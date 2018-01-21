@@ -1,0 +1,16 @@
+#!/bin/sh
+
+SCRIPT=$0:A
+DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
+HOSTNAME="$(hostname -s)"
+
+# Visual Studio Code
+ln -nfs $DOTFILES/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# Git
+ln -nfs $DOTFILES/git/gitconfig ~/.gitconfig
+ln -nfs $DOTFILES/git/gitignore-global ~/.gitignore-global
+
+if [ -f "$DOTFILES/git/gitconfig-$HOSTNAME" ]; then
+    ln -nfs $DOTFILES/git/gitconfig-$HOSTNAME ~/.gitconfig-local
+fi

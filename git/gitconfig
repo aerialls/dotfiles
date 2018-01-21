@@ -1,0 +1,15 @@
+[user]
+    name = Julien Brochet
+    email = julien@aerialls.io
+
+[core]
+    excludesfile = ~/.gitignore-global
+
+[mergetool]
+    prompt = false
+
+[push]
+    default = current
+
+[include]
+    path = ~/.gitconfig-local
