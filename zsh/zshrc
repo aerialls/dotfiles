@@ -30,3 +30,6 @@ if ! zgen saved; then
 
     zgen save
 fi
+
+# Remove username@hostname
+prompt_context() {}
