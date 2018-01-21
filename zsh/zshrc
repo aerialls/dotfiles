@@ -11,6 +11,7 @@ is_osx () {
 }
 
 source ~/dotfiles/zgen/zgen.zsh
+source ~/dotfiles/zsh/aliases.zsh
 
 if ! zgen saved; then
     zgen oh-my-zsh
