@@ -4,6 +4,8 @@ SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
 HOSTNAME="$(hostname -s)"
 
+source $DOTFILES/zsh/functions.zsh
+
 cd $DOTFILES && git submodule init && git submodule update
 
 # Fonts
@@ -24,5 +26,7 @@ fi
 ln -nfs $DOTFILES/zsh/zshrc.zsh ~/.zshrc
 
 # iTerm
-defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
-defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+if is_macos; then
+    defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
+    defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+fi

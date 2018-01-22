@@ -1,17 +1,7 @@
-command_exists () {
-  type "$1" &> /dev/null;
-}
-
-is_linux () {
-    [[ $('uname') == 'Linux' ]];
-}
-
-is_macos () {
-    [[ $('uname') == 'Darwin' ]]
-}
+source ~/dotfiles/zsh/functions.zsh
+source ~/dotfiles/zsh/aliases.zsh
 
 source ~/dotfiles/zgen/zgen.zsh
-source ~/dotfiles/zsh/aliases.zsh
 
 if ! zgen saved; then
     zgen oh-my-zsh
@@ -32,5 +22,5 @@ if ! zgen saved; then
     zgen save
 fi
 
-# Remove username@hostname
+# Remove prompt
 prompt_context() {}
