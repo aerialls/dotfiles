@@ -1,6 +1,7 @@
 [user]
     name = Julien Brochet
     email = jbrochet@alkemics.com
+    signingkey = E662B13A61C5C292
 
 [commit]
     gpgsign = true
