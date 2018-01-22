@@ -4,7 +4,7 @@ SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
 HOSTNAME="$(hostname -s)"
 
-cd $DOTFILES && git submodule init
+cd $DOTFILES && git submodule init && git submodule update
 
 # Fonts
 $DOTFILES/fonts/install.sh
