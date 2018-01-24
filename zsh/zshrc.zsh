@@ -22,5 +22,12 @@ if ! zgen saved; then
     zgen save
 fi
 
+# Custom settings pear workstation
+HOSTNAME="$(hostname -s)"
+
+if [ -f ~/dotfiles/zsh/local/$HOSTNAME.zsh ]; then
+    source ~/dotfiles/zsh/local/$HOSTNAME.zsh
+fi
+
 # Remove prompt
 prompt_context() {}
