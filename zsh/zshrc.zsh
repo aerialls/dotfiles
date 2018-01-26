@@ -29,5 +29,9 @@ if [ -f ~/dotfiles/zsh/local/$HOSTNAME.zsh ]; then
     source ~/dotfiles/zsh/local/$HOSTNAME.zsh
 fi
 
+if is_macos; then
+    export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
+
 # Remove prompt
 prompt_context() {}
