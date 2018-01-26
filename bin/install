@@ -4,29 +4,22 @@ SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
 HOSTNAME="$(hostname -s)"
 
+HOMEBREW_PACKAGES=(
+    'curl'
+    'git'
+    'git-town'
+    'go'
+    'ncdu'
+    'openssl'
+    'telnet'
+)
+
 source $DOTFILES/zsh/functions.zsh
 
 cd $DOTFILES && git submodule init && git submodule update
 
 # Fonts
 $DOTFILES/fonts/install.sh &> /dev/null
-
-# homebrew
-if is_macos; then
-    packages=(
-        'curl'
-        'git'
-        'git-town'
-        'go'
-        'ncdu'
-        'openssl'
-        'telnet'
-    )
-
-    for package in "${packages[@]}"; do
-        brew install $package &> /dev/null
-    done
-fi
 
 # Visual Studio Code
 ln -nfs $DOTFILES/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
@@ -42,8 +35,14 @@ fi
 # ZSH
 ln -nfs $DOTFILES/zsh/zshrc.zsh ~/.zshrc
 
-# iTerm
+# macOS specific stuff
 if is_macos; then
+    # Homebrew
+    for package in "${HOMEBREW_PACKAGES[@]}"; do
+        brew install $package &> /dev/null
+    done
+
+    # iTerm
     defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
     defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 fi
