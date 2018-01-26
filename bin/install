@@ -9,7 +9,24 @@ source $DOTFILES/zsh/functions.zsh
 cd $DOTFILES && git submodule init && git submodule update
 
 # Fonts
-$DOTFILES/fonts/install.sh
+$DOTFILES/fonts/install.sh &> /dev/null
+
+# homebrew
+if is_macos; then
+    packages=(
+        'curl'
+        'git'
+        'git-town'
+        'go'
+        'ncdu'
+        'openssl'
+        'telnet'
+    )
+
+    for package in "${packages[@]}"; do
+        brew install $package &> /dev/null
+    done
+fi
 
 # Visual Studio Code
 ln -nfs $DOTFILES/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
