@@ -3,6 +3,7 @@
 SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
 HOSTNAME="$(hostname -s)"
+HOMEBREW="/usr/local/bin/brew"
 
 HOMEBREW_PACKAGES=(
     'curl'
@@ -14,9 +15,23 @@ HOMEBREW_PACKAGES=(
     'telnet'
 )
 
-source $DOTFILES/zsh/functions.zsh
+is_macos () {
+    [[ $('uname') == 'Darwin' ]]
+}
 
 cd $DOTFILES && git submodule init && git submodule update
+
+if is_macos; then
+    if [ ! -x $HOMEBREW ]; then
+        # Setup Homebrew
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+
+    # Basic packages for Homebrew
+    for package in "${HOMEBREW_PACKAGES[@]}"; do
+        brew install $package &> /dev/null
+    done
+fi
 
 # Fonts
 $DOTFILES/fonts/install.sh &> /dev/null
@@ -35,13 +50,7 @@ fi
 # ZSH
 ln -nfs $DOTFILES/zsh/zshrc.zsh ~/.zshrc
 
-# macOS specific stuff
 if is_macos; then
-    # Homebrew
-    for package in "${HOMEBREW_PACKAGES[@]}"; do
-        brew install $package &> /dev/null
-    done
-
     # iTerm
     defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
     defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
