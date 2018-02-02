@@ -227,6 +227,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>3773AB2F-31A3-4337-A3EE-A93D49842AAC</string>
+	<key>HideTab</key>
+	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
