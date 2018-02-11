@@ -16,6 +16,13 @@ HOMEBREW_PACKAGES=(
     'telnet'
 )
 
+VSCODE_EXTENSIONS=(
+    'PeterJausovec.vscode-docker'
+    'lukehoban.Go'
+    'CoenraadS.bracket-pair-colorizer'
+    'robertohuertasm.vscode-icons'
+)
+
 is_macos () {
     [[ $('uname') == 'Darwin' ]]
 }
@@ -56,4 +63,10 @@ if is_macos; then
     # iTerm
     defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
     defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+
+    # Visual Studio Code extensions
+    CODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+    for extension in "${VSCODE_EXTENSIONS[@]}"; do
+        "$CODE" --install-extension $extension &> /dev/null
+    done
 fi
