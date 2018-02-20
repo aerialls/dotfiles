@@ -3,6 +3,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "python.pythonPath": "/usr/local/bin/python3",
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile"
 }

@@ -13,6 +13,7 @@ HOMEBREW_PACKAGES=(
     'ncdu'
     'openssl'
     'p7zip'
+    'python3'
     'telnet'
 )
 
@@ -21,6 +22,7 @@ VSCODE_EXTENSIONS=(
     'lukehoban.Go'
     'CoenraadS.bracket-pair-colorizer'
     'robertohuertasm.vscode-icons'
+    'ms-python.python'
 )
 
 is_macos () {
