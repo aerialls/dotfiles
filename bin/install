@@ -13,6 +13,7 @@ HOMEBREW_PACKAGES=(
     'ncdu'
     'openssl'
     'p7zip'
+    'python'
     'python3'
     'telnet'
 )
