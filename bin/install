@@ -42,6 +42,8 @@ if is_macos; then
     for package in "${HOMEBREW_PACKAGES[@]}"; do
         brew install $package &> /dev/null
     done
+
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 fi
 
 # Fonts
