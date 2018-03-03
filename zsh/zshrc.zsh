@@ -31,6 +31,7 @@ fi
 
 if is_macos; then
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    export PATH="$PATH:/usr/local/opt/python@2/bin"
 fi
 
 # Remove prompt
