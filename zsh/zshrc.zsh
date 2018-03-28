@@ -34,5 +34,9 @@ if is_macos; then
     export PATH="$PATH:/usr/local/opt/python@2/bin"
 fi
 
+# Go specific stuff
+export GOPATH="$HOME/Go"
+export PATH="$PATH:$HOME/Go/bin"
+
 # Remove prompt
 prompt_context() {}
