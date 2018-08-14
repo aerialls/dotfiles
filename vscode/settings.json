@@ -5,5 +5,8 @@
     "files.trimTrailingWhitespace": true,
     "python.pythonPath": "/usr/local/bin/python3",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.fontFamily": "Meslo LG M DZ for Powerline",
+    "breadcrumbs.enabled": true,
+    "workbench.colorTheme": "Monokai Dimmed"
 }
