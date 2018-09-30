@@ -8,22 +8,20 @@ HOMEBREW="/usr/local/bin/brew"
 HOMEBREW_PACKAGES=(
     'curl'
     'git'
-    'git-town'
     'go'
     'ncdu'
     'openssl'
-    'p7zip'
     'python'
-    'python@2'
     'telnet'
+    'zsh'
+    'zplug'
 )
 
 VSCODE_EXTENSIONS=(
     'PeterJausovec.vscode-docker'
     'lukehoban.Go'
-    'CoenraadS.bracket-pair-colorizer'
-    'robertohuertasm.vscode-icons'
     'ms-python.python'
+    'pkief.material-icon-theme'
 )
 
 is_macos () {
