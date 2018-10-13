@@ -6,70 +6,71 @@ HOSTNAME="$(hostname -s)"
 HOMEBREW="/usr/local/bin/brew"
 
 HOMEBREW_PACKAGES=(
+    'zsh'
     'curl'
     'git'
+    'hub'
     'go'
     'ncdu'
     'openssl'
     'python'
     'telnet'
-    'zsh'
-    'zplug'
+)
+
+HOMEBREW_CASK_PACKAGES=(
+    'iterm2'
+    'visual-studio-code'
 )
 
 VSCODE_EXTENSIONS=(
-    'PeterJausovec.vscode-docker'
-    'lukehoban.Go'
-    'ms-python.python'
     'pkief.material-icon-theme'
 )
 
-is_macos () {
-    [[ $('uname') == 'Darwin' ]]
-}
+cd $DOTFILES && git submodule update --init --recursive
 
-cd $DOTFILES && git submodule init && git submodule update
-
-if is_macos; then
-    if [ ! -x $HOMEBREW ]; then
-        # Setup Homebrew
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    fi
-
-    # Basic packages for Homebrew
-    for package in "${HOMEBREW_PACKAGES[@]}"; do
-        brew install $package &> /dev/null
-    done
-
-    defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+# Make sure Homebrew is installed
+if [ ! -x $HOMEBREW ]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Fonts
-$DOTFILES/fonts/install.sh &> /dev/null
+# Homebrew packages
+for package in "${HOMEBREW_PACKAGES[@]}"; do
+    brew install $package &> /dev/null
+done
+
+# Homebrew cask packages
+for package in "${HOMEBREW_CASK_PACKAGES[@]}"; do
+    brew cask install $package &> /dev/null
+done
+
+# macOS parameters
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 
 # Visual Studio Code
 ln -nfs $DOTFILES/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -nfs $DOTFILES/vscode/locale.json ~/Library/Application\ Support/Code/User/locale.json
 
 # Git
-ln -nfs $DOTFILES/git/gitconfig ~/.gitconfig
-ln -nfs $DOTFILES/git/gitignore-global ~/.gitignore-global
-
-if [ -f "$DOTFILES/git/gitconfig-$HOSTNAME" ]; then
-    ln -nfs $DOTFILES/git/gitconfig-$HOSTNAME ~/.gitconfig-local
+if [ -f "$DOTFILES/git/gitconfig/$HOSTNAME" ]; then
+    ln -nfs $DOTFILES/git/gitconfig/$HOSTNAME ~/.gitconfig
+else
+    ln -nfs $DOTFILES/git/gitconfig/default ~/.gitconfig
 fi
+
+ln -nfs $DOTFILES/git/gitignore ~/.gitignore
 
 # ZSH
+ln -nfs $DOTFILES/zsh/zlogin.zsh ~/.zlogin
+ln -nfs $DOTFILES/zsh/zlogout.zsh ~/.zlogout
+ln -nfs $DOTFILES/zsh/zpreztorc.zsh ~/.zpreztorc
+ln -nfs $DOTFILES/zsh/zprofile.zsh ~/.zprofile
+ln -nfs $DOTFILES/zsh/zshenv.zsh ~/.zshenv
 ln -nfs $DOTFILES/zsh/zshrc.zsh ~/.zshrc
 
-if is_macos; then
-    # iTerm
-    defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
-    defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
-
-    # Visual Studio Code extensions
-    CODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
-    for extension in "${VSCODE_EXTENSIONS[@]}"; do
-        "$CODE" --install-extension $extension &> /dev/null
-    done
-fi
+# Visual Studio Code extensions
+CODE="/usr/local/bin/code"
+for extension in "${VSCODE_EXTENSIONS[@]}"; do
+    "$CODE" --install-extension $extension &> /dev/null
+done

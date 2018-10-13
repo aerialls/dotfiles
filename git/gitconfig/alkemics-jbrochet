@@ -3,5 +3,11 @@
     email = jbrochet@alkemics.com
     signingkey = E662B13A61C5C292
 
-[commit]
-    gpgsign = true
+[core]
+    excludesfile = ~/.gitignore
+
+[mergetool]
+    prompt = false
+
+[push]
+    default = current

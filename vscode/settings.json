@@ -1,11 +1,11 @@
 {
+    "breadcrumbs.enabled": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "python.pythonPath": "/usr/local/bin/python3",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
-    "breadcrumbs.enabled": true,
-    "workbench.colorTheme": "One Dark Pro"
 }

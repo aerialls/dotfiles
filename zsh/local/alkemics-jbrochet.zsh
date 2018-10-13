@@ -1,2 +1,1 @@
-ssh-add -K ~/.ssh/ansible_ppr &> /dev/null
-ssh-add -K ~/.ssh/ansible_prd &> /dev/null
+zstyle ':prezto:module:ssh:load' identities 'ansible_ppr' 'ansible_prd'

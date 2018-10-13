@@ -3,13 +3,10 @@
     email = julien@aerialls.io
 
 [core]
-    excludesfile = ~/.gitignore-global
+    excludesfile = ~/.gitignore
 
 [mergetool]
     prompt = false
 
 [push]
     default = current
-
-[include]
-    path = ~/.gitconfig-local

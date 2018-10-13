@@ -1,3 +1,2 @@
-if is_macos; then
-    alias afk="pmset displaysleepnow"
-fi
+alias afk="pmset displaysleepnow"
+alias git=hub
