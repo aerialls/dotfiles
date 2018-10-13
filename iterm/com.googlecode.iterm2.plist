@@ -443,10 +443,6 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iterm</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -478,12 +474,10 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>631 175 445 103 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>229 190 918 512 0 0 1280 777 </string>
+	<string>252 259 958 470 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>472 130 605 391 0 0 1280 777 </string>
+	<string>257 183 920 391 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_3773AB2F-31A3-4337-A3EE-A93D49842AAC</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_3773AB2F-31A3-4337-A3EE-A93D49842AAC_selection</key>
@@ -1130,9 +1124,11 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>A6F3A155-9DB7-4C7E-B998-9D1A8FF65EC1</string>
+	<string>C0449E43-2C51-40E3-9C1F-0C0F465856D2</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>560022393.445894</real>
+	<real>560629538.51154196</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>PointerActions</key>
@@ -1179,20 +1175,22 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=33</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=56</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-30T18:03:29Z</date>
+	<date>2018-10-12T17:37:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
+	<key>UseVirtualKeyCodesForDetectingDigits</key>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.2.1</string>
+	<string>3.2.3</string>
 </dict>
 </plist>
