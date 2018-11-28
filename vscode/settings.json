@@ -8,11 +8,14 @@
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
-    "github.hosts": [
+    "githubPullRequests.hosts": [
         {
             "host": "https://github.com",
             "username": "oauth",
             "token": "system"
         }
     ],
+    "gitlens.gitExplorer.location": "scm",
+    "gitlens.historyExplorer.location": "scm",
+    "gitlens.resultsExplorer.location": "scm",
 }
