@@ -7,6 +7,4 @@ source ~/dotfiles/zsh/aliases.zsh
 export GOPATH="$HOME/Go"
 export PATH="$PATH:$HOME/Go/bin"
 
-if [ -f ~/dotfiles/zsh/local/$HOSTNAME.zsh ]; then
-    source ~/dotfiles/zsh/local/$HOSTNAME.zsh
-fi
+source ~/dotfiles/zsh/local/$HOSTNAME*.zsh
