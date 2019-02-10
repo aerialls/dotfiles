@@ -443,10 +443,6 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -478,29 +474,14 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>722 101 445 77 0 0 1280 777 </string>
-	<key>NSWindow Frame ProfilesPanel</key>
-	<string>306 261 735 382 0 0 1280 777 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1381 1496 400 129 621 800 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1271 1316 620 392 621 800 1920 1080 </string>
+	<string>330 305 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 150 606 469 0 0 1280 777 </string>
+	<string>269 126 606 469 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>282 280 918 423 0 0 1280 777 </string>
+	<string>252 259 958 470 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1033 936 690 431 621 800 1920 1080 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>357 214 690 431 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>173 322 605 367 0 0 1280 778 </string>
+	<string>251 202 986 431 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_3773AB2F-31A3-4337-A3EE-A93D49842AAC</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_3773AB2F-31A3-4337-A3EE-A93D49842AAC_selection</key>
@@ -1144,27 +1125,16 @@
 			<string>/Users/jbrochet</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>0483E05D-9B8F-4D6F-9D5E-056979313755</string>
-	<key>NoSyncLastTipTime</key>
-	<real>538390260.77698004</real>
+	<string>C0449E43-2C51-40E3-9C1F-0C0F465856D2</string>
 	<key>NoSyncPermissionToShowTip</key>
-	<true/>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>537787723.06214094</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-	</array>
+	<real>560629538.51154196</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>PointerActions</key>
@@ -1201,23 +1171,21 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/jbrochet/dotfiles/iterm</string>
+	<string>/Users/aerialls/dotfiles/iterm</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
-	<key>SUAutomaticallyUpdate</key>
-	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=4</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=56</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-12T13:46:02Z</date>
+	<date>2019-01-25T13:37:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
@@ -1228,7 +1196,9 @@
 	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.3</string>
+	<string>3.2.6</string>
 </dict>
 </plist>
