@@ -14,6 +14,7 @@ HOMEBREW_PACKAGES=(
     'ncdu'
     'openssl'
     'python'
+    'ruby'
     'telnet'
 )
 
