@@ -8,4 +8,6 @@ export GOPATH="$HOME/Go"
 export PATH="$PATH:$HOME/Go/bin"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
-source ~/dotfiles/zsh/local/$HOSTNAME*.zsh
+if [[ -n $(find ~/dotfiles/zsh/local/ -name "$HOSTNAME*.zsh") ]]; then
+    source ~/dotfiles/zsh/local/$HOSTNAME*.zsh
+fi
