@@ -13,6 +13,7 @@ HOMEBREW_PACKAGES=(
     'go'
     'ncdu'
     'openssl'
+    'python@2'
     'python'
     'ruby'
     'telnet'
