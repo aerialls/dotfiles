@@ -11,3 +11,5 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 if [[ -n $(find ~/dotfiles/zsh/local/ -name "$HOSTNAME*.zsh") ]]; then
     source ~/dotfiles/zsh/local/$HOSTNAME*.zsh
 fi
+
+source <(kubectl completion zsh)

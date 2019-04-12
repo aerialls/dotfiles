@@ -17,6 +17,9 @@ HOMEBREW_PACKAGES=(
     'python'
     'ruby'
     'telnet'
+    'terraform'
+    'kubernetes-cli'
+    'kubernetes-helm'
 )
 
 HOMEBREW_CASK_PACKAGES=(
