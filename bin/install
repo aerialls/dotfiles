@@ -15,7 +15,6 @@ HOMEBREW_PACKAGES=(
     'openssl'
     'python@2'
     'python'
-    'ruby'
     'telnet'
     'terraform'
     'kubernetes-cli'
