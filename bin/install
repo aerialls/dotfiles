@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
@@ -48,8 +48,10 @@ for package in "${HOMEBREW_CASK_PACKAGES[@]}"; do
     brew cask install $package &> /dev/null
 done
 
-# macOS parameters
-defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+# macOS
+"$DOTFILES/macos.sh"
+
+# iTerm 2
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 
