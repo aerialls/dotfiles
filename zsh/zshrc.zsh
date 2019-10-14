@@ -8,6 +8,7 @@ export GOPATH="$HOME/Go"
 
 export PATH="$HOME/Go/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 if [[ -n $(find ~/dotfiles/zsh/local/ -name "$HOSTNAME*.zsh") ]]; then
     source ~/dotfiles/zsh/local/$HOSTNAME*.zsh
