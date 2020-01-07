@@ -15,7 +15,7 @@ HOMEBREW_PACKAGES=(
     'ncdu'
     'openssl'
     'python@2'
-    'python'
+    'python@3.8'
     'telnet'
     'terraform'
     'kubernetes-cli'
