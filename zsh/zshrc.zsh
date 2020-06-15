@@ -9,7 +9,6 @@ export GOPATH="$HOME/Go"
 export PATH="$HOME/Go/bin:$PATH"
 
 # Others
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 

@@ -11,10 +11,7 @@ HOMEBREW_PACKAGES=(
     'git'
     'hub'
     'go'
-    'mysql-client'
-    'ncdu'
     'openssl'
-    'python@2'
     'python@3.8'
     'telnet'
     'terraform'
@@ -29,6 +26,7 @@ HOMEBREW_CASK_PACKAGES=(
 
 VSCODE_EXTENSIONS=(
     'pkief.material-icon-theme'
+    'github.github-vscode-theme'
 )
 
 cd $DOTFILES && git submodule update --init --recursive
