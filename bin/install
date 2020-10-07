@@ -12,7 +12,7 @@ HOMEBREW_PACKAGES=(
     'hub'
     'go'
     'openssl'
-    'python@3.8'
+    'python@3.9'
     'telnet'
     'terraform'
     'kubernetes-cli'
