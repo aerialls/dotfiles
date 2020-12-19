@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 SCRIPT=$0:A
 DOTFILES="$(cd "$(dirname $SCRIPT)/.." && pwd)"
 HOSTNAME="$(hostname -s)"
@@ -11,9 +13,8 @@ HOMEBREW_PACKAGES=(
     'git'
     'hub'
     'go'
-    'openssl'
+    'packer'
     'python@3.9'
-    'telnet'
     'terraform'
     'kubernetes-cli'
     'kubernetes-helm'
@@ -22,11 +23,6 @@ HOMEBREW_PACKAGES=(
 HOMEBREW_CASK_PACKAGES=(
     'iterm2'
     'visual-studio-code'
-)
-
-VSCODE_EXTENSIONS=(
-    'pkief.material-icon-theme'
-    'github.github-vscode-theme'
 )
 
 cd $DOTFILES && git submodule update --init --recursive
@@ -54,7 +50,6 @@ defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iter
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 
 # Visual Studio Code
-ln -nfs $DOTFILES/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -nfs $DOTFILES/vscode/locale.json ~/Library/Application\ Support/Code/User/locale.json
 
 # Git
@@ -73,9 +68,3 @@ ln -nfs $DOTFILES/zsh/zpreztorc.zsh ~/.zpreztorc
 ln -nfs $DOTFILES/zsh/zprofile.zsh ~/.zprofile
 ln -nfs $DOTFILES/zsh/zshenv.zsh ~/.zshenv
 ln -nfs $DOTFILES/zsh/zshrc.zsh ~/.zshrc
-
-# Visual Studio Code extensions
-CODE="/usr/local/bin/code"
-for extension in "${VSCODE_EXTENSIONS[@]}"; do
-    "$CODE" --install-extension $extension &> /dev/null
-done

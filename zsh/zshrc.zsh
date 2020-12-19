@@ -11,9 +11,8 @@ export PATH="$HOME/Go/bin:$PATH"
 # Others
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+export PATH="/usr/local/opt/node@15/bin:$PATH"
 
-if [[ -n $(find ~/dotfiles/zsh/local/ -name "$HOSTNAME*.zsh") ]]; then
-    source ~/dotfiles/zsh/local/$HOSTNAME*.zsh
-fi
+[[ -f "~/dotfiles/zsh/local.zsh" ]] && source ~/dotfiles/zsh/local.zsh
 
 source <(kubectl completion zsh)
